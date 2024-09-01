@@ -1,6 +1,6 @@
 # hilabs_rag
 Submission for hackathon
-"""# PDF Chatbot with LLM and Table Extraction
+# PDF Chatbot with LLM and Table Extraction
 This project implements a PDF chatbot that uses Language Model (LLM) integration and table extraction to provide intelligent responses to questions about PDF content. It combines vector search, keyword extraction, and table analysis to offer comprehensive answers.
 ## Features
 - PDF text and table extraction
@@ -76,5 +76,4 @@ This project implements a PDF chatbot that uses Language Model (LLM) integration
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
-This project is open-source and available under the MIT License."""
-In this readme add this pdf
+This project is open-source and available under the MIT License.
