@@ -39,7 +39,7 @@ This project implements a PDF chatbot that uses Language Model (LLM) integration
 ## Usage
 1. In CMD run:
 
-   Ollama run gemma2:1.5b
+   Ollama run gemma2:2b
    
 2. Run the script:
    
