@@ -2,6 +2,8 @@
 Submission for hackathon
 # PDF Chatbot with LLM and Table Extraction
 This project implements a PDF chatbot that uses Language Model (LLM) integration and table extraction to provide intelligent responses to questions about PDF content. It combines vector search, keyword extraction, and table analysis to offer comprehensive answers.
+
+![PDF Chatbot](https://github.com/yourusername/pdf-chatbot/blob/main/architecture.png)
 ## Features
 - PDF text and table extraction
 - Vector store creation for efficient similarity search
