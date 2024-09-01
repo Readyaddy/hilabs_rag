@@ -37,16 +37,20 @@ This project implements a PDF chatbot that uses Language Model (LLM) integration
    - For Windows: Download and install from [GitHub](https://github.com/UB-Mannheim/tesseract/wiki)
 4. Install Ollama following the instructions on the [official website](https://ollama.ai/).
 ## Usage
-1. Run the script:
+1. In CMD run:
+
+   Ollama run gemma2:1.5b
+   
+2. Run the script:
    
    python pdf_chatbot.py
    
-2. Open the Gradio interface in your web browser (the URL will be displayed in the console).
-3. In the "Process PDF" tab:
+3. Open the Gradio interface in your web browser (the URL will be displayed in the console).
+4. In the "Process PDF" tab:
    - Upload a PDF file
    - Click "Process PDF"
    - Wait for the "PDF processed successfully!" message
-4. Switch to the "Ask Questions" tab:
+5. Switch to the "Ask Questions" tab:
    - Enter your question about the PDF content
    - Click "Ask"
    - View the JSON response containing the answer and related information
