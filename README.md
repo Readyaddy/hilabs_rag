@@ -29,7 +29,7 @@ This project implements a PDF chatbot that uses Language Model (LLM) integration
    
 2. Install the required packages:
    
-   pip install PyPDF2 pytesseract pdf2image langchain gradio pandas ollama tabula-py
+   pip install PyPDF2 pytesseract pdf2image langchain gradio pandas ollama tabula-py chromadb
    
 3. Install Tesseract OCR on your system if not already installed:
    - For Ubuntu: sudo apt-get install tesseract-ocr
