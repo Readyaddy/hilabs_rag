@@ -24,7 +24,7 @@ This project implements a PDF chatbot that uses Language Model (LLM) integration
 ## Installation
 1. Clone this repository:
    
-   git clone https://github.com/yourusername/pdf-chatbot.git
+   git clone https://github.com/Readyaddy/hilabs_rag.git
    cd pdf-chatbot
    
 2. Install the required packages:
