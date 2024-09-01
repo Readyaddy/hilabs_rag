@@ -1,7 +1,7 @@
 # hilabs_rag
 Submission for hackathon
 # PDF Chatbot with LLM and Table Extraction
-This project implements a PDF chatbot that uses Language Model (LLM) integration and table extraction to provide intelligent responses to questions about PDF content. It combines vector search, keyword extraction, and table analysis to offer comprehensive answers.
+This project implements a PDF chatbot that uses Large Language Model (LLM) integration and table extraction to provide intelligent responses to questions about PDF content. It combines vector search, keyword extraction, and table analysis to offer comprehensive answers.
 
 ![PDF Chatbot](https://github.com/Readyaddy/hilabs_rag/blob/main/architecture.png)
 ## Features
@@ -16,6 +16,8 @@ This project implements a PDF chatbot that uses Language Model (LLM) integration
 - pytesseract
 - pdf2image
 - langchain
+- langchain-community
+- sentence-transformers
 - gradio
 - pandas
 - ollama
@@ -28,21 +30,28 @@ This project implements a PDF chatbot that uses Language Model (LLM) integration
    cd pdf-chatbot
    
 2. Install the required packages:
+
+   pip install PyPDF2 pytesseract pdf2image langchain gradio pandas ollama tabula-py chromadb sentence-transformers -U langchain-community 
+
+3. Install Java on the system, if not already installed, from (https://www.java.com/en/download/manual.jsp)
    
-   pip install PyPDF2 pytesseract pdf2image langchain gradio pandas ollama tabula-py chromadb
-   
-3. Install Tesseract OCR on your system if not already installed:
+4. Install Tesseract OCR on your system if not already installed:
    - For Ubuntu: sudo apt-get install tesseract-ocr
    - For macOS: brew install tesseract
-   - For Windows: Download and install from [GitHub](https://github.com/UB-Mannheim/tesseract/wiki)
-4. Install Ollama following the instructions on the [official website](https://ollama.ai/).
+   - For Windows: Download and install from (https://github.com/UB-Mannheim/tesseract/wiki)
+   - 
+5. Install Poppler-utils on your system if not already installed:
+   - For Ubuntu: sudo apt-get install poppler-utils
+   - For macOS: brew install poppler
+   - For Windows: Download and install from (https://github.com/oschwartz10612/poppler-windows/releases), extract the zip and add the bin directory of the 
+      extracted folder to your system’s PATH.
+     
+6. Install Ollama following the instructions on the [official website](https://ollama.ai/).
 ## Usage
 1. In CMD run:
-
-   Ollama run gemma2:1.5b
+   Ollama run gemma2:2b
    
 2. Run the script:
-   
    python pdf_chatbot.py
    
 3. Open the Gradio interface in your web browser (the URL will be displayed in the console).
