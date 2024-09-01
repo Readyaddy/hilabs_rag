@@ -49,6 +49,7 @@ This project implements a PDF chatbot that uses Large Language Model (LLM) integ
 6. Install Ollama following the instructions on the [official website](https://ollama.ai/).
 ## Usage
 1. In CMD run:
+
    Ollama run gemma2:2b
    
 2. Run the script:
@@ -81,6 +82,19 @@ This project implements a PDF chatbot that uses Large Language Model (LLM) integ
    - Uses Ollama to generate responses, extract keywords, and evaluate answer quality
 5. User Interface:
    - Provides a Gradio-based interface for easy PDF processing and question answering
+# Why This Approach
+
+Most of the important data in the PDF was in the form of tables, so we initially started by extracting text. However, the tables were not formatted correctly when extracted as plain text. 
+
+We then tried using OCR, which formatted the tables correctly, but it took too much time. To optimize the process, we moved to using Tabula for table extraction and PyPDF2 for normal text extraction.
+
+Our approach works as follows:
+1. **Code Detection**: Codes were the most important thing in the tables as they were used to define things.We first check if the question contains any specific codes. If a code is found, we extract it and search within the tables. then put it in the prompt to the llm for answering
+2. **Unified Retrieval**: If no code is detected, we look for specific names like diseases or other entities that might be present in the tables. We then perform a unified retrieval, combining both semantic retrieval and keyword retrieval.
+3. **LLM Integration**: All relevant documents retrieved are passed to the LLM for generating a response.
+4. **Multi-Query Retrieval**: If the initial response is not satisfactory, we perform multi-query retrieval on the PDF to improve the answer quality.
+
+
 ## Customization
 - To use a different LLM, modify the LLMServer class in the script
 - Adjust the chunk_size and chunk_overlap in the create_vectorstore function for different text splitting behavior
