@@ -20,6 +20,7 @@ This project implements a PDF chatbot that uses Language Model (LLM) integration
 - pandas
 - ollama
 - tabula-py
+- chromadb
 ## Installation
 1. Clone this repository:
    
